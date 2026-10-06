@@ -2,7 +2,7 @@
 
 An animated, responsive redesign of the [Tulas International School](https://tis.edu.in/) homepage. Brand copy, school facts and the yellow and navy identity are kept from the original site.
 
-**Live demo:** _add your Vercel/Netlify URL here_
+**Live demo:** https://tis-redesign-rho.vercel.app/
 
 ## Features
 
