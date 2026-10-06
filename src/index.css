@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 247 248 251;
+    --surface: 255 255 255;
+    --ink: 15 27 61;
+    --muted: 79 91 117;
+    --line: 218 223 234;
+    --brand: 245 183 0;
+    --navy: 15 27 61;
+  }
+  .dark {
+    --bg: 11 18 38;
+    --surface: 20 30 58;
+    --ink: 237 241 250;
+    --muted: 160 172 196;
+    --line: 42 55 90;
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { @apply bg-bg font-sans text-ink antialiased; }
+  h1, h2, h3 { @apply font-display; }
+  /* Smooth colour change when the theme toggles */
+  body, header, section, footer, article, input, select { @apply transition-colors duration-300; }
+  :focus-visible { @apply outline-none ring-2 ring-offset-2 ring-offset-bg ring-ink; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+}
+
+@layer utilities {
+  .marquee-track { animation: marquee 28s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+  }
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
